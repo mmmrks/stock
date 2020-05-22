@@ -52,7 +52,7 @@ const stockpileplugin = {
         }
       },
       beforeCreate () {
-        this.$stock = options.stash
+        this.$stock = options
       }
     })
   }

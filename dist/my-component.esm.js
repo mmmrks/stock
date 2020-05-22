@@ -56,7 +56,7 @@ var stockpileplugin = {
         }
       },
       beforeCreate: function beforeCreate () {
-        this.$stock = options.stash;
+        this.$stock = options;
       }
     });
   }
