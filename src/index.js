@@ -4,7 +4,7 @@ class StockPile {
 
   constructor (data = {}) {
 
-
+    console.log(data)
     this.stashVM = new Vue({ data })
 
   }

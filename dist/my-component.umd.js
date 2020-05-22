@@ -10,7 +10,7 @@
     if ( data === void 0 ) data = {};
 
 
-
+    console.log(data);
     this.stashVM = new Vue({ data: data });
 
   };
