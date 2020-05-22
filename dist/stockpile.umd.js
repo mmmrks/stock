@@ -1,5 +1,8 @@
-var stock = (function (exports, Vue) {
-  'use strict';
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue'], factory) :
+  (global = global || self, factory(global.StockPile = {}, global.Vue));
+}(this, (function (exports, Vue) { 'use strict';
 
   Vue = Vue && Object.prototype.hasOwnProperty.call(Vue, 'default') ? Vue['default'] : Vue;
 
@@ -7,7 +10,6 @@ var stock = (function (exports, Vue) {
     if ( data === void 0 ) data = {};
 
 
-    console.log(data);
     this.stashVM = new Vue({ data: data });
 
   };
@@ -67,6 +69,6 @@ var stock = (function (exports, Vue) {
 
   exports.default = stockpileplugin;
 
-  return exports;
+  Object.defineProperty(exports, '__esModule', { value: true });
 
-}({}, Vue));
+})));
