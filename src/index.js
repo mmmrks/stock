@@ -82,15 +82,20 @@ const stockpileplugin = {
 
           if( !Vue.config.devtools ) return;
 
-          if ( typeof value === 'string' )
+          if( !unset )
           {
-            console.log(`%c[StockPile]: ${type.toUpperCase()} stash updated FROM ${callerName} component — ${key} = ${value}`, "color:#42b983")
-            if( callerName === "[unnamed]" ) console.log(`%c[StockPile WARNING]: It's recommended to name you components for better tracking`, "color:#dccd53");
-          }
-          else if( typeof value === 'object' )
-          {
-            console.log(`%c[StockPile]: ${type.toUpperCase()} stash updated FROM ${callerName} component — ${key} = ${JSON.stringify(value)}`, "color:#42b983")
-            if( callerName === "[unnamed]" ) console.log(`%c[StockPile WARNING]: It's recommended to name you components for better tracking`, "color:#dccd53");
+
+            if ( typeof value === 'object' )
+            {
+              console.log(`%c[StockPile]: ${type.toUpperCase()} stash updated FROM ${callerName} component — ${key} = ${JSON.stringify(value)}`, "color:#42b983")
+              if( callerName === "[unnamed]" ) console.log(`%c[StockPile WARNING]: It's recommended to name you components for better tracking`, "color:#dccd53");
+            }
+            else
+            {
+              console.log(`%c[StockPile]: ${type.toUpperCase()} stash updated FROM ${callerName} component — ${key} = ${value}`, "color:#42b983")
+              if( callerName === "[unnamed]" ) console.log(`%c[StockPile WARNING]: It's recommended to name you components for better tracking`, "color:#dccd53");
+            }
+
           }
           else
           {
