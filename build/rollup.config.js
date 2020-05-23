@@ -7,7 +7,7 @@ export default {
     external: [ 'vue' ],
     output: {
         name: 'StockPile',
-        exports: 'named',
+        exports: 'default',
         globals: { 'vue': 'Vue' }
     },
     plugins: [

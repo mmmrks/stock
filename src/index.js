@@ -80,7 +80,7 @@ const stockpileplugin = {
 
           }
 
-          if( process.env.NODE_ENV != 'development' ) return;
+          if( !Vue.config.devtools ) return;
 
           if ( typeof value === 'string' )
           {
