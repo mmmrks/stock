@@ -1,7 +1,9 @@
-import commonjs from '@rollup/plugin-commonjs'; // Convert CommonJS modules to ES6
-import buble from '@rollup/plugin-buble'; // Transpile/polyfill with reasonable browser support
+import commonjs from '@rollup/plugin-commonjs';
+import buble from '@rollup/plugin-buble';
+import { terser } from "rollup-plugin-terser";
+
 export default {
-    input: 'src/index.js', // Path relative to package.json
+    input: 'src/index.js',
     external: [ 'vue' ],
     output: {
         name: 'StockPile',
@@ -10,6 +12,7 @@ export default {
     },
     plugins: [
         commonjs(),
-        buble()
+        buble(),
+        terser()
     ],
 };
