@@ -1,10 +1,17 @@
 {
-  "name": "stockpile",
+  "name": "@mmmrks/vue-stockpile",
   "version": "1.0.0",
   "description": "Simple & Lighweight state manager for VueJS",
   "main": "src/index.js",
   "author": "mmmrks.mail@gmail.com",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmmrks/stock.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/stockpile.umd.js",
